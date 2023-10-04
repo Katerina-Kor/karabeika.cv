@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 .body {
@@ -68,8 +69,9 @@ html {
 }
 
 .section {
-  padding: 15px 10px 30px;
+  padding: 15px 20px 30px;
   border-bottom: 1px solid #8e4d57;
+  width: 100%;
 }
 
 .section_profile {
@@ -99,7 +101,6 @@ html {
   border: 1px solid #8e4d57;
 }
 
-
 .section__title {
   font-size: 20px;
   font-weight: 400;
@@ -123,6 +124,10 @@ html {
 .section_languages,
 .section_skills {
   border-bottom: none;
+}
+
+.list {
+  padding-left: 10px;
 }
 
 .list__link {
@@ -161,15 +166,54 @@ html {
   font-style: italic;
 }
 
-@media (max-width: 768px) {
-  .section {
-      width: 100%;
+@media screen and (max-width: 768px) {
+  .header {
+    display: none;
   }
 
-  .section-profile-item {
-      width: 100%;
+  .main__container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile";
   }
-  .languages-section {
+
+  .section_profile {
+    padding: 30px 20px;
+  }
+
+  .section_profile__item {
+    width: 100%;
+  }
+
+  .section_profile__avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title_main {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .section__title {
+    font-size: 18px;
+  }
+
+  .section_profile__subtitle {
+    font-size: 16px;
+  }
+
+  .body {
+    font-size: 15px;
+  }
+
+  .section_languages,
+  .section_profile {
       border-bottom: 1px solid #8e4d57;
+  }
+
+  .footer__img {
+    width: 20px;
+    height: 20px;
   }
 }
