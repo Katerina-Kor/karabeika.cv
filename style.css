@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  color: #323131;
+  background-color: rgb(233, 229, 222);
+}
+
+.header,
+.footer {
+  background-color: #8e4d57;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 50px;
+}
+
+.nav {
+  padding: 15px 0;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item {
+  padding: 0 15px;
+  text-align: center;
+}
+
+.nav__link {
+  color: goldenrod;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.nav__link:hover {
+  color: #4d2323;
+  border-bottom: 1px solid;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "profile profile";
+  column-gap: 35px;
+}
+
+.section {
+  padding: 15px 10px 30px;
+  border-bottom: 1px solid #8e4d57;
+}
+
+.section_profile {
+  grid-area: profile;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 30px;
+  border-bottom: 0;
+}
+
+.section_profile__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  width: 50%;
+}
+
+.section_profile__avatar {
+  background: center / cover no-repeat url(./assets/img/photo_2023-08-10_22-45-54.jpg);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #8e4d57;
+}
+
+
+.section__title {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #8e4d57;
+  text-align: center;
+}
+
+.title_main {
+  font-size: 32px;
+  line-height: 35px;
+}
+
+.section_profile__subtitle {
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+.section_languages,
+.section_skills {
+  border-bottom: none;
+}
+
+.list__link {
+  text-decoration: none;
+  color: #8e4d57;
+  transition: color 0.5s;
+}
+
+.list__link:hover {
+  color: goldenrod;
+}
+
+.section_education__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.footer__img {
+  width: 30px;
+  height: 30px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .section {
+      width: 100%;
+  }
+
+  .section-profile-item {
+      width: 100%;
+  }
+  .languages-section {
+      border-bottom: 1px solid #8e4d57;
+  }
+}
